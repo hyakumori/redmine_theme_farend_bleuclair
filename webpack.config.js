@@ -70,7 +70,7 @@ module.exports = {
         use: [{ loader: 'url-loader' }]
       },
       {
-        test: /\.(jpg|jpeg|png)$/,
+        test: /\.(png)$/,
         include: path.resolve(__dirname, 'src/images'),
         use: [{
           loader: 'file-loader',
