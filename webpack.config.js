@@ -69,18 +69,18 @@ module.exports = {
         include: path.resolve(__dirname, 'src/images'),
         use: [{ loader: 'url-loader' }]
       },
-      // {
-      //   test: /\.(png)$/,
-      //   include: path.resolve(__dirname, 'src/images'),
-      //   use: [{
-      //     loader: 'file-loader',
-      //     options: {
-      //       name: "[name].[ext]",
-      //       outputPath: '../images',
-      //       publicPath: '../images',
-      //     }
-      //   }]
-      // },
+      {
+        test: /\.(png)$/,
+        include: path.resolve(__dirname, 'src/images'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: "[name].[ext]",
+            outputPath: '../images',
+            publicPath: '../images',
+          }
+        }]
+      },
       {
         // src/webfonts以下のファイルを../stylesheets/webfontsに出力し、パスを管理
         test: /\.(ttf|eot|woff|woff2|svg)$/,
