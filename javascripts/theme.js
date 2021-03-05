@@ -1,7 +1,33 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 935:
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scripts_bleuclair_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/bleuclair.js */ "./src/scripts/bleuclair.js");
+/* harmony import */ var _scripts_bleuclair_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scripts_bleuclair_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_bleuclair_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/bleuclair.scss */ "./src/styles/bleuclair.scss");
+// When built, it will be output as bleuclair/javascripts/theme.js
+; // When built, it will be output as bleuclair/stylesheets/theme.css
+
+
+
+/***/ }),
+
+/***/ "./src/scripts/bleuclair.js":
+/*!**********************************!*\
+  !*** ./src/scripts/bleuclair.js ***!
+  \**********************************/
+/*! unknown exports (runtime-defined) */
+/*! runtime requirements:  */
 /***/ (() => {
 
 function setDiscontinuityClassToTabContent(id) {
@@ -131,6 +157,22 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+/***/ }),
+
+/***/ "./src/styles/bleuclair.scss":
+/*!***********************************!*\
+  !*** ./src/styles/bleuclair.scss ***!
+  \***********************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -188,17 +230,22 @@ window.addEventListener('DOMContentLoaded', function () {
 /******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /************************************************************************/
-(() => {
-"use strict";
-/* harmony import */ var _scripts_bleuclair_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(935);
-/* harmony import */ var _scripts_bleuclair_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scripts_bleuclair_js__WEBPACK_IMPORTED_MODULE_0__);
-// When built, it will be output as bleuclair/javascripts/theme.js
-; // When built, it will be output as bleuclair/stylesheets/theme.css
-
-
-})();
-
+/******/ 	// startup
+/******/ 	// Load entry module
+/******/ 	__webpack_require__("./src/index.js");
+/******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
 //# sourceMappingURL=theme.js.map
