@@ -20,7 +20,7 @@ module.exports = {
     rules: [
       // Compile JavaScript
       {
-        test: /\.js$/, 
+        test: /\.js$/,
         exclude: /node_modules/,
         // ES2015以降の新しい構文をES5の構文に変換
         use: {
@@ -37,7 +37,7 @@ module.exports = {
           // jsからスタイル部分を別ファイルとして出力('../stylesheets/theme.css')
           MiniCssExtractPlugin.loader,
           {
-            // CSSスタイルシートをjsファイルに埋め込む 
+            // CSSスタイルシートをjsファイルに埋め込む
             loader: 'css-loader',
             options: {
               sourceMap: true
@@ -66,13 +66,25 @@ module.exports = {
       {
         // src/images以下のSVGファイルをDataURL形式でCSS内に埋め込み
         test: /\.(svg)$/i,
-        include: path.resolve(__dirname, 'src/images'), 
+        include: path.resolve(__dirname, 'src/images'),
         use: [{ loader: 'url-loader' }]
+      },
+      {
+        test: /\.(jpg|jpeg|png)$/,
+        include: path.resolve(__dirname, 'src/images'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: "[name].[ext]",
+            outputPath: '../images',
+            publicPath: '../images',
+          }
+        }]
       },
       {
         // src/webfonts以下のファイルを../stylesheets/webfontsに出力し、パスを管理
         test: /\.(ttf|eot|woff|woff2|svg)$/,
-        include: path.resolve(__dirname, 'src/webfonts'), 
+        include: path.resolve(__dirname, 'src/webfonts'),
         use: [{
             loader: 'file-loader',
             options: {
